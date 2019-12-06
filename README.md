@@ -1,22 +1,22 @@
 # BBPpred
-BBPpred uses machine learning to predict BBB. Users can run program with specified protein sequences.
+BBPpred uses machine learning to predict Blood-brain barrier peptides (BBPs). Users can run program with specified protein sequences.
 
 ![draft](https://github.com/loneMT/BBBPred/blob/master/codes/Flowchart.png)
 
 
-Figure 1. Framework of BBB peptides prediction using machine learning methods. The 1st stage is dataset preparation to form training dataset and independent dataset; The 2nd stage is feature encoding; The 3rd stage is to train and evaluate prediction models. The independent test is usually to validate the ability of a trained model. The 4th stage is to compare the model performance. The 5th is to construction our user friendly webserver for our BBB peptide prediction tool.
+Figure 1. The prediction framework of BBPpred. In the first stage, the training and independent test datasets were collected from a series of literatures and publically available databases. After removed the peptides sequences which have > 90% sequence similarity using the CD-HIT [16], we obtained 119 positive samples and 119 negative samples. In the second stage, a variety of sequence-based features for BBPs were encoded. The third stage is model construction using five ML algorithms, including XGB, RF, SVM, KNN and LR. In the fourth stage, we evaluated the prediction ability of the models on an independent test dataset. In the last step, we build a web server based on the SVM model, and for a given query sequence, the developed prediction model could predict whether it is a BBB peptide. 
 
 <br />
 
 # Abstract
 
 ### Motivation:
-Neurologic and psychiatric disorders account for a remarkable 28%of all years of life lived with a disability, and effective medicines for these diseases are in scarcity .The physical and enzymatic barrier called blood-brain barrier is the main bottleneck in the delivery of therapeutic drugs to the brain. Blood-brain barrier peptides (BBB peptides) have recently emerged as promising therapeutic agents which can cross the blood-brain barrier. Due to the avalanche of protein sequence data in the post-genomic era, there is an urgent need to develop automated computational methods to enable fast and accurate identification of novel BBB peptides within the vast number of candidate proteins and peptides. <br />
+Neurologic and psychiatric disorders account for a remarkable 28% of all years of life lived with a disability, and effective medicines for these diseases are in scarcity .The physical and enzymatic barrier called blood-brain barrier is the main bottleneck in the delivery of therapeutic drugs to the brain. Blood-brain barrier peptides have recently emerged as promising therapeutic agents which can cross the blood-brain barrier. Due to the avalanche of protein sequence data in the post-genomic era, there is an urgent need to develop automated computational methods to enable fast and accurate identification of novel BBB peptides within the vast number of candidate proteins and peptides. <br />
 
 web-server is also available at http://bioinfo.ahu.edu.cn/BBPpred/
 
 ### Results:
-In this work, we present BBBPred, a novel bioinformatics tool that allows users to rapidly and accurately identify the blood–brain barrier peptide. BBBPred was developed by using the most suitable machine learning models combined with optimized feature representations. We evaluated BBBPred based on well-prepared up-to-date benchmark and independent test datasets. The independent test proved that BBBPred have well prediction performance for BBB peptides prediction. In summary, our tool provides users with high-quality predicted blood-brain barrier peptides for hypothesis generation and biological validation. <br />
+In this work, we present BBPpred, a novel bioinformatics tool that allows users to rapidly and accurately identify the blood–brain barrier peptide. BBBPred was developed by using the most suitable machine learning models combined with optimized feature representations. We evaluated BBBPred based on well-prepared up-to-date benchmark and independent test datasets. The independent test proved that BBBPred have well prediction performance for BBB peptides prediction. In summary, our tool provides users with high-quality predicted blood-brain barrier peptides for hypothesis generation and biological validation. <br />
 <br />
 
 
@@ -25,7 +25,7 @@ In this work, we present BBBPred, a novel bioinformatics tool that allows users 
 # Installation
 * Install Python 3.5 in Linux and Windows.
 * Because the program is written in Python 3.5, python 3.5 with the pip tool must be installed first. 
-* BBBPred uses the following dependencies: numpy, pandas, collection, biopython and sklearn You can install these packages first, by the following commands:
+* BBPpred uses the following dependencies: numpy, pandas, collection, biopython and sklearn You can install these packages first, by the following commands:
 ```
 pip install numpy
 pip install biopython==1.73 
@@ -44,7 +44,7 @@ pip install sklearn
 ```
 
 # Running BBPpred
-open cmd in Windows or terminal in Linux, then cd to the BBBPred-master/codes folder which contains predict.py 
+open cmd in Windows or terminal in Linux, then cd to the BBPpred-master/codes folder which contains predict.py 
 
 To predict general BBB using our model, run: 
 
