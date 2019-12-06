@@ -76,7 +76,7 @@ $ python Test.py <file.fasta> <br />
 
    | Sequence ID | Prediction |
    |-------------|------------|
-   | Seq1        ||
+   | Seq1        |0.8089|
    
 6- If you run on test.fasta that's uploaded on this github, you can compare the results with the Expected_Prediction_Result.csv that's also uploaded on this github. <br />
 
