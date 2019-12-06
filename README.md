@@ -1,7 +1,7 @@
 # BBPpred
 BBPpred uses machine learning to predict Blood-brain barrier peptides (BBPs). Users can run program with specified protein sequences.
 
-![draft]()
+![draft](https://github.com/loneMT/BBPpred/blob/master/codes/Flowchart.jpg)
 
 
 Figure 1. The prediction framework of BBPpred. In the first stage, the training and independent test datasets were collected from a series of literatures and publically available databases. After removed the peptides sequences which have > 90% sequence similarity using the CD-HIT, we obtained 119 positive samples and 119 negative samples. In the second stage, a variety of sequence-based features for BBPs were encoded. The third stage is model construction using five ML algorithms, including XGB, RF, SVM, KNN and LR. In the fourth stage, we evaluated the prediction ability of the models on an independent test dataset. In the last step, we build a web server based on the SVM model, and for a given query sequence, the developed prediction model could predict whether it is a BBB peptide. 
