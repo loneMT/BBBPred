@@ -51,7 +51,7 @@ To predict general BBB using our model, run: 
 `python predict.py [custom predicting data in fasta format]  [ predicting results in csv format]`
 
 
-# Run BBBPred on a New Test File (Fasta file)
+# Run BBPpred on a New Test File (Fasta file)
 
 1- Protein sequences have to be saved in a fasta format similar to following format: <br />
 
@@ -76,7 +76,7 @@ $ python Test.py <file.fasta> <br />
 
    | Sequence ID | Prediction |
    |-------------|------------|
-   | Seq1        |yes|
+   | Seq1        ||
    
 6- If you run on test.fasta that's uploaded on this github, you can compare the results with the Expected_Prediction_Result.csv that's also uploaded on this github. <br />
 
